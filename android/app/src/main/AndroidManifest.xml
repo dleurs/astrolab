@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dev.leurs.astrolab.astrolab">
+    package="dev.leurs.fbs.astrolab.astrolab">
    <application
         android:label="astrolab"
         android:name="${applicationName}"

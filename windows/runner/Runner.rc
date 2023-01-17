@@ -89,11 +89,11 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "dev.leurs.astrolab" "\0"
+            VALUE "CompanyName", "dev.leurs.fbs.astrolab" "\0"
             VALUE "FileDescription", "astrolab" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "astrolab" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 dev.leurs.astrolab. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2023 dev.leurs.fbs.astrolab. All rights reserved." "\0"
             VALUE "OriginalFilename", "astrolab.exe" "\0"
             VALUE "ProductName", "astrolab" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"

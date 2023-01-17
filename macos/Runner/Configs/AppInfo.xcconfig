@@ -8,7 +8,7 @@
 PRODUCT_NAME = astrolab
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = dev.leurs.astrolab.astrolab
+PRODUCT_BUNDLE_IDENTIFIER = dev.leurs.fbs.astrolab.astrolab
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 dev.leurs.astrolab. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2023 dev.leurs.fbs.astrolab. All rights reserved.
