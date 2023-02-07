@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "program": "lib/main.dart",
+            "args": [],
+            "name": "Astrolab debug",
+            "request": "launch",
+            "type": "dart"
+        },
+    ]
+}
