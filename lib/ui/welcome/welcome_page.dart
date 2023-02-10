@@ -1,5 +1,6 @@
 import 'package:astrolab/theme/theme.dart';
 import 'package:astrolab/ui/pick_horoscope_wheel/pick_horoscope_wheel_page.dart';
+import 'package:astrolab/ui/welcome/welcome.dart';
 import 'package:astrolab/ui/welcome/widgets/home_calculate_astro.dart';
 import 'package:astrolab/ui/welcome/widgets/home_circle_astro.dart';
 import 'package:astrolab/ui/welcome/widgets/home_playlist_example.dart';
@@ -27,6 +28,12 @@ class WelcomePage extends StatelessWidget {
                   "Entrer",
                   onPressed: () {
                     Navigator.of(context).pushNamed(PickHoroscopeWheel.nameRoute);
+                  },
+                ),
+                WidgetButton(
+                  "welcome",
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(Welcome.nameRoute);
                   },
                 ),
                 Padding(

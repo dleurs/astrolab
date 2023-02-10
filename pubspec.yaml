@@ -59,7 +59,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/fonts/
-    - assets/images/boom/
+    - assets/images/welcome/
 
 
   fonts:
@@ -87,3 +87,22 @@ flutter:
         - asset: assets/fonts/montserrat/Montserrat-SemiBoldItalic.ttf
         - asset: assets/fonts/montserrat/Montserrat-Thin.ttf
         - asset: assets/fonts/montserrat/Montserrat-ThinItalic.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/roboto/Roboto-Black.ttf
+        - asset: assets/fonts/montserrat/Roboto-BlackItalic.ttf
+        - asset: assets/fonts/montserrat/Roboto-Bold.ttf
+        - asset: assets/fonts/montserrat/Roboto-BoldItalic.ttf
+        - asset: assets/fonts/montserrat/Roboto-Italic.ttf
+        - asset: assets/fonts/montserrat/Roboto-Light.ttf
+        - asset: assets/fonts/montserrat/Roboto-LightItalic.ttf
+        - asset: assets/fonts/montserrat/Roboto-Medium.ttf
+        - asset: assets/fonts/montserrat/Roboto-MediumItalic.ttf
+        - asset: assets/fonts/montserrat/Roboto-Regular.ttf
+          style: normal
+        - asset: assets/fonts/montserrat/Roboto-Thin.ttf
+        - asset: assets/fonts/montserrat/Roboto-ThinItalic.ttf
+    - family: Jost
+      fonts:
+        - asset: assets/fonts/Jost-Regular.ttf
+          style: normal
