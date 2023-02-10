@@ -1,5 +1,6 @@
 import 'package:astrolab/theme/theme.dart';
 import 'package:astrolab/ui/horosocope_details/horoscope_details_page.dart';
+import 'package:astrolab/ui/welcome/welcome.dart';
 import 'package:astrolab/ui/welcome/welcome_page.dart';
 import 'package:astrolab/ui/pick_horoscope_wheel/pick_horoscope_wheel_page.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const WelcomePage(),
         PickHoroscopeWheel.nameRoute: (context) => const PickHoroscopeWheel(),
         HoroscopeDetailsPage.nameRoute: (context) => const HoroscopeDetailsPage(),
+        Welcome.nameRoute: (context) => const Welcome(),
       },
     );
   }

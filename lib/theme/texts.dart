@@ -4,6 +4,9 @@ class PlTextTheme extends TextTheme {
   static const textFontFamily = "Afterglow";
   static const textFontFamilyMontserrat = "Montserrat";
 
+  static const robotoFontFamily = "Roboto";
+  static const jostFontFamily = "Jost";
+
   final WidgetColorScheme _colors;
 
   const PlTextTheme(this._colors);
@@ -160,6 +163,26 @@ class PlTextTheme extends TextTheme {
       fontSize: 16,
       height: 20 / 16,
       color: Color(0xFF88CEF0),
+    );
+  }
+
+  TextStyle get textHeaderStyle {
+    return const TextStyle(
+      fontFamily: jostFontFamily,
+      fontStyle: FontStyle.normal,
+      fontWeight: FontWeight.w400,
+      fontSize: 60,
+      height: 87 / 60,
+    );
+  }
+
+  TextStyle get textNormalStyle {
+    return const TextStyle(
+      fontFamily: robotoFontFamily,
+      fontStyle: FontStyle.normal,
+      fontWeight: FontWeight.w300,
+      fontSize: 20,
+      height: 23 / 20,
     );
   }
 }
