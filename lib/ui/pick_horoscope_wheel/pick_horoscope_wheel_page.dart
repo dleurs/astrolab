@@ -1,4 +1,6 @@
 import 'package:astrolab/theme/theme.dart';
+import 'package:astrolab/ui/horosocope_details/horoscope_details_page.dart';
+import 'package:astrolab/ui/shared/widget_button.dart';
 import 'package:astrolab/ui/shared/widget_text.dart';
 import 'package:flutter/material.dart';
 
@@ -20,9 +22,19 @@ class _SelectBirthdayState extends State<PickHoroscopeWheel> {
         backgroundColor: context.colors.background,
         body: SafeArea(
           child: Center(
-            child: WidgetText(
-              "PickHoroscopeWheel",
-              style: context.textTheme.headline2.copyWith(color: Colors.white),
+            child: Column(
+              children: [
+                WidgetText(
+                  "PickHoroscopeWheel",
+                  style: context.textTheme.headline2.copyWith(color: Colors.white),
+                ),
+                WidgetButton(
+                  "Entrer",
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(HoroscopeDetailsPage.nameRoute);
+                  },
+                ),
+              ],
             ),
           ),
         ),

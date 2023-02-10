@@ -1,15 +1,16 @@
 import 'package:astrolab/theme/theme.dart';
-import 'package:astrolab/ui/home/widgets/home_calculate_astro.dart';
-import 'package:astrolab/ui/home/widgets/home_circle_astro.dart';
-import 'package:astrolab/ui/home/widgets/home_playlist_example.dart';
+import 'package:astrolab/ui/pick_horoscope_wheel/pick_horoscope_wheel_page.dart';
+import 'package:astrolab/ui/welcome/widgets/home_calculate_astro.dart';
+import 'package:astrolab/ui/welcome/widgets/home_circle_astro.dart';
+import 'package:astrolab/ui/welcome/widgets/home_playlist_example.dart';
 import 'package:astrolab/ui/shared/widget_button.dart';
 import 'package:astrolab/ui/shared/widget_header.dart';
 import 'package:astrolab/ui/shared/widget_space.dart';
 import 'package:astrolab/ui/shared/widget_text.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class WelcomePage extends StatelessWidget {
+  const WelcomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +23,12 @@ class HomePage extends StatelessWidget {
             child: Column(
               children: [
                 const WidgetHeader("ASTRO"),
+                WidgetButton(
+                  "Entrer",
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(PickHoroscopeWheel.nameRoute);
+                  },
+                ),
                 Padding(
                   padding: WidgetGutter.horizontal.md,
                   child: Container(
