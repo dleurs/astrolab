@@ -14,12 +14,11 @@ class PlTextTheme extends TextTheme {
   @override
   TextStyle get headline1 {
     return TextStyle(
-      fontFamily: textFontFamily,
       fontStyle: FontStyle.normal,
-      fontWeight: FontWeight.w400,
-      fontSize: 36,
+      fontWeight: FontWeight.w500,
+      fontSize: 40,
       height: 43 / 36,
-      color: _colors.onBackground,
+      color: _colors.primary,
     );
   }
 
@@ -50,12 +49,11 @@ class PlTextTheme extends TextTheme {
   @override
   TextStyle get headline4 {
     return TextStyle(
-      fontFamily: textFontFamily,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w400,
-      fontSize: 16,
+      fontSize: 24,
       height: 19 / 16,
-      color: _colors.onBackground,
+      color: _colors.primary,
     );
   }
 
@@ -85,12 +83,11 @@ class PlTextTheme extends TextTheme {
   @override
   TextStyle get bodyText1 {
     return TextStyle(
-      fontFamily: textFontFamily,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w400,
-      fontSize: 15,
+      fontSize: 18,
       height: 24 / 15,
-      color: _colors.onBackground,
+      color: _colors.primary,
     );
   }
 

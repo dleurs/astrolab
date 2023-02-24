@@ -20,9 +20,20 @@ class _SelectBirthdayState extends State<HoroscopeDetailsPage> {
         backgroundColor: context.colors.background,
         body: SafeArea(
           child: Center(
-            child: WidgetText(
-              "HoroscopeDetailsPage",
-              style: context.textTheme.headline2.copyWith(color: Colors.white),
+            child: Column(
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const WidgetText(
+                    "Retour",
+                  ),
+                ),
+                const WidgetText(
+                  "HoroscopeDetailsPage",
+                ),
+              ],
             ),
           ),
         ),
