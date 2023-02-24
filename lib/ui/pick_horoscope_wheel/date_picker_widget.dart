@@ -28,13 +28,18 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          WidgetText(
-            "Date de naissance :",
-            style: context.textTheme.bodyText2,
+          Padding(
+            padding: const EdgeInsets.only(left: 42.0),
+            child: WidgetText(
+              "Date de naissance :",
+              style: context.textTheme.bodyText1,
+            ),
           ),
-          WidgetSpace.medium,
+          WidgetSpace.large,
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              WidgetSpace.large,
               SizedBox(
                 height: 120,
                 width: 50,
