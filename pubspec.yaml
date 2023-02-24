@@ -90,18 +90,18 @@ flutter:
     - family: Roboto
       fonts:
         - asset: assets/fonts/roboto/Roboto-Black.ttf
-        - asset: assets/fonts/montserrat/Roboto-BlackItalic.ttf
-        - asset: assets/fonts/montserrat/Roboto-Bold.ttf
-        - asset: assets/fonts/montserrat/Roboto-BoldItalic.ttf
-        - asset: assets/fonts/montserrat/Roboto-Italic.ttf
-        - asset: assets/fonts/montserrat/Roboto-Light.ttf
-        - asset: assets/fonts/montserrat/Roboto-LightItalic.ttf
-        - asset: assets/fonts/montserrat/Roboto-Medium.ttf
-        - asset: assets/fonts/montserrat/Roboto-MediumItalic.ttf
-        - asset: assets/fonts/montserrat/Roboto-Regular.ttf
+        - asset: assets/fonts/roboto/Roboto-BlackItalic.ttf
+        - asset: assets/fonts/roboto/Roboto-Bold.ttf
+        - asset: assets/fonts/roboto/Roboto-BoldItalic.ttf
+        - asset: assets/fonts/roboto/Roboto-Italic.ttf
+        - asset: assets/fonts/roboto/Roboto-Light.ttf
+        - asset: assets/fonts/roboto/Roboto-LightItalic.ttf
+        - asset: assets/fonts/roboto/Roboto-Medium.ttf
+        - asset: assets/fonts/roboto/Roboto-MediumItalic.ttf
+        - asset: assets/fonts/roboto/Roboto-Regular.ttf
           style: normal
-        - asset: assets/fonts/montserrat/Roboto-Thin.ttf
-        - asset: assets/fonts/montserrat/Roboto-ThinItalic.ttf
+        - asset: assets/fonts/roboto/Roboto-Thin.ttf
+        - asset: assets/fonts/roboto/Roboto-ThinItalic.ttf
     - family: Jost
       fonts:
         - asset: assets/fonts/Jost-Regular.ttf
