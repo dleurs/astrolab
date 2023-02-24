@@ -21,7 +21,7 @@ class HoroscopeInfoWidget extends StatelessWidget {
           ),
           WidgetSpace.small,
           WidgetText(
-            "${HoroscopeUtils.dayMonthFormat(horoscope.beginDate)} - ${HoroscopeUtils.dayMonthFormat(horoscope.endDate)}",
+            "${HoroscopeUtils.dayMonthFormat(horoscope.beginDate1)} - ${HoroscopeUtils.dayMonthFormat(horoscope.endDate2 ?? horoscope.endDate1)}",
             style: context.textTheme.headline4,
             textAlign: TextAlign.center,
           ),

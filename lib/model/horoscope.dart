@@ -1,14 +1,16 @@
 import 'package:astrolab/data/horoscope_data_mock.dart';
+import 'package:astrolab/model/month.dart';
 import 'package:astrolab/ui/pick_horoscope_wheel/date_picker_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class Horoscope with ChangeNotifier {
   String name;
   String iconPath;
   String bio;
-  DateTime beginDate;
-  DateTime endDate;
+  DateTime beginDate1;
+  DateTime endDate1;
+  DateTime? beginDate2; // For capricorne, 22 december to 19 january
+  DateTime? endDate2; // For capricorne, 22 december to 19 january
   Element element;
   Planet planet;
   List<Power> powers;
@@ -18,8 +20,8 @@ class Horoscope with ChangeNotifier {
     name = newHoroscope.name;
     iconPath = newHoroscope.iconPath;
     bio = newHoroscope.bio;
-    beginDate = newHoroscope.beginDate;
-    endDate = newHoroscope.endDate;
+    beginDate1 = newHoroscope.beginDate1;
+    endDate1 = newHoroscope.endDate1;
     element = newHoroscope.element;
     planet = newHoroscope.planet;
     powers = newHoroscope.powers;
@@ -30,8 +32,10 @@ class Horoscope with ChangeNotifier {
     required this.name,
     required this.iconPath,
     required this.bio,
-    required this.beginDate,
-    required this.endDate,
+    required this.beginDate1,
+    required this.endDate1,
+    this.beginDate2,
+    this.endDate2,
     required this.element,
     required this.planet,
     required this.powers,
@@ -57,6 +61,8 @@ enum Planet {
 }
 
 enum Power {
+  originalite("Originalité"),
+  independance("Indépendance"),
   loyaute("Loyauté"),
   emotions("Émotions"),
   determination("Détermination"),
@@ -69,6 +75,8 @@ enum Power {
 }
 
 enum Weakness {
+  inflexibilite("Inflexibilité"),
+  colerique("Colérique"),
   lunatique("Lunatique"),
   pessimisme("Pessimiste"),
   manipulation("Manipulation");
@@ -81,12 +89,21 @@ class HoroscopeUtils {
   static getHoroscope({required int day, required int month}) => HoroscopeDataMock.all.firstWhere(
         (horoscope) {
           final initialDate = DateTime(DatePickerWidget.defaultYear, month, day);
-          return horoscope.beginDate.isBefore(initialDate) && horoscope.endDate.isAfter(initialDate);
+          if (horoscope.beginDate2 != null && horoscope.endDate2 != null) {
+            return horoscope.beginDate1.isBefore(initialDate) && horoscope.endDate1.isAfter(initialDate) ||
+                horoscope.beginDate2!.isBefore(initialDate) && horoscope.endDate2!.isAfter(initialDate);
+          } else {
+            return horoscope.beginDate1.isBefore(initialDate) && horoscope.endDate1.isAfter(initialDate);
+          }
         },
         orElse: () => HoroscopeDataMock.cancer,
       );
 
-  static dayMonthFormat(DateTime date) => DateFormat('dd.MM').format(date);
+  static dayMonthFormat(DateTime date) {
+    final strMonth = MonthUtils.all.firstWhere((month) => month.month == date.month, orElse: () => Month.janvier);
+    return "${date.day} $strMonth";
+  }
+
   static powersTitle(List<Power> stones) {
     String value = "";
     if (stones.isEmpty) {
