@@ -1,4 +1,4 @@
-import 'package:astrolab/model/horoscope.dart';
+import 'package:astrolab/model/current_horoscope.dart';
 import 'package:astrolab/theme/theme.dart';
 import 'package:astrolab/ui/pick_horoscope_wheel/date_picker_widget.dart';
 import 'package:astrolab/ui/pick_horoscope_wheel/full_horoscope_widget.dart';
@@ -31,7 +31,7 @@ class _SelectBirthdayState extends State<PickHoroscopeWheel> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SvgPicture.asset(
-                        Provider.of<Horoscope>(context).iconPath,
+                        Provider.of<CurrentHoroscope>(context).value.iconPath,
                         color: context.colors.secondary,
                         width: MediaQuery.of(context).size.width * 0.8,
                       ),

@@ -1,8 +1,11 @@
+import 'package:astrolab/model/current_horoscope.dart';
+import 'package:astrolab/model/horoscope.dart';
 import 'package:astrolab/model/month.dart';
 import 'package:astrolab/theme/theme.dart';
 import 'package:astrolab/ui/shared/widget_space.dart';
 import 'package:astrolab/ui/shared/widget_text.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:wheel_chooser/wheel_chooser.dart';
 
 class DatePickerWidget extends StatefulWidget {
@@ -10,7 +13,7 @@ class DatePickerWidget extends StatefulWidget {
 
   static const defaultYear = 2000;
   static const initialMonth = Month.juillet;
-  static const initialDay = 14;
+  static const initialDay = 15;
 
   @override
   State<DatePickerWidget> createState() => _DatePickerWidgetState();
@@ -18,7 +21,7 @@ class DatePickerWidget extends StatefulWidget {
 
 class _DatePickerWidgetState extends State<DatePickerWidget> {
   FixedExtentScrollController? controller = FixedExtentScrollController(
-    initialItem: DatePickerWidget.initialDay,
+    initialItem: DatePickerWidget.initialDay + 1,
   );
   var month = DatePickerWidget.initialMonth;
   var day = DatePickerWidget.initialDay;
@@ -47,6 +50,7 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
                 child: WheelChooser.integer(
                   onValueChanged: (i) {
                     day = i;
+                    Provider.of<CurrentHoroscope>(context, listen: false).changeHoroscope(HoroscopeUtils.getHoroscope(day: day, month: month.month));
                   },
                   controller: controller,
                   minValue: 1,
@@ -69,6 +73,8 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
                           day = month.maxDays;
                           controller!.jumpToItem(day);
                         }
+                        Provider.of<CurrentHoroscope>(context, listen: false)
+                            .changeHoroscope(HoroscopeUtils.getHoroscope(day: day, month: month.month));
                       });
                     },
                     startPosition: MonthUtils.all.indexOf(DatePickerWidget.initialMonth),
