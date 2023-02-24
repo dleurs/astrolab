@@ -64,7 +64,7 @@ class _LightColors extends WidgetColorScheme {
             brightness: Brightness.light,
             primary: const Color(0xFF202031),
             onPrimary: const Color(0xFFFFFFFF),
-            secondary: const Color(0xFFE3E3E3),
+            secondary: const Color(0xFFF3F1EC),
             onSecondary: const Color(0xFF908F96),
             background: Colors.white,
             onBackground: Colors.white,
