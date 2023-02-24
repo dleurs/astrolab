@@ -94,12 +94,11 @@ class PlTextTheme extends TextTheme {
   @override
   TextStyle get bodyText2 {
     return TextStyle(
-      fontFamily: textFontFamily,
       fontStyle: FontStyle.normal,
-      fontWeight: FontWeight.w500,
-      fontSize: 13,
+      fontWeight: FontWeight.w400,
+      fontSize: 16,
       height: 22 / 13,
-      color: _colors.onSurface,
+      color: _colors.primary,
     );
   }
 

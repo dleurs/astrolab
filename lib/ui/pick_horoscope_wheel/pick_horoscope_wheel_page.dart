@@ -1,8 +1,10 @@
-import 'package:astrolab/data/horoscope_data_mock.dart';
+import 'package:astrolab/model/horoscope.dart';
 import 'package:astrolab/theme/theme.dart';
-import 'package:astrolab/ui/horosocope_details/horoscope_details_page.dart';
-import 'package:astrolab/ui/pick_horoscope_wheel/horoscope_info_widget.dart';
+import 'package:astrolab/ui/pick_horoscope_wheel/date_picker_widget.dart';
+import 'package:astrolab/ui/pick_horoscope_wheel/full_horoscope_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
 
 class PickHoroscopeWheel extends StatefulWidget {
   const PickHoroscopeWheel({super.key});
@@ -22,18 +24,29 @@ class _SelectBirthdayState extends State<PickHoroscopeWheel> {
         backgroundColor: context.colors.background,
         body: SafeArea(
           child: Center(
-            child: Column(
+            child: Stack(
               children: [
-                const Expanded(flex: 1, child: SizedBox()),
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).pushNamed(HoroscopeDetailsPage.nameRoute);
-                  },
-                  child: HoroscopeInfoWidget(
-                    horoscope: HoroscopeDataMock.verseau,
+                SafeArea(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        Provider.of<Horoscope>(context).iconPath,
+                        color: context.colors.secondary,
+                        width: MediaQuery.of(context).size.width * 0.8,
+                      ),
+                    ],
                   ),
                 ),
-                const Expanded(flex: 2, child: SizedBox()),
+                Column(
+                  children: const [
+                    Expanded(flex: 3, child: SizedBox()),
+                    FullHoroscopteWidget(),
+                    Expanded(flex: 2, child: SizedBox()),
+                    DatePickerWidget(),
+                    Expanded(flex: 2, child: SizedBox()),
+                  ],
+                ),
               ],
             ),
           ),

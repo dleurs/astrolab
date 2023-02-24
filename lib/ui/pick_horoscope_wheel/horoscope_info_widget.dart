@@ -21,7 +21,7 @@ class HoroscopeInfoWidget extends StatelessWidget {
           ),
           WidgetSpace.small,
           WidgetText(
-            "${HoroscopeUtils.dayMonthFormat(horoscope.beginDate)} - ${HoroscopeUtils.dayMonthFormat(horoscope.endDate)}",
+            "${HoroscopeUtils.dayMonthFormat(horoscope.beginDate1)} - ${HoroscopeUtils.dayMonthFormat(horoscope.endDate2 ?? horoscope.endDate1)}",
             style: context.textTheme.headline4,
             textAlign: TextAlign.center,
           ),
@@ -61,9 +61,10 @@ class HoroscopeInfoWidget extends StatelessWidget {
             text: TextSpan(
               style: context.textTheme.bodyText1,
               children: <TextSpan>[
-                TextSpan(text: HoroscopeUtils.stonesTitle(horoscope.stones)),
+                TextSpan(text: HoroscopeUtils.weaknessTitle(horoscope.weaknesses)),
                 TextSpan(
-                    text: HoroscopeUtils.stonesElements(horoscope.stones), style: context.textTheme.bodyText1.copyWith(fontWeight: FontWeight.bold)),
+                    text: HoroscopeUtils.weaknessElements(horoscope.weaknesses),
+                    style: context.textTheme.bodyText1.copyWith(fontWeight: FontWeight.bold)),
               ],
             ),
           ),
