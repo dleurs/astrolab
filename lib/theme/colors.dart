@@ -66,7 +66,7 @@ class _LightColors extends WidgetColorScheme {
             onPrimary: const Color(0xFFFFFFFF),
             secondary: const Color(0xFFE3E3E3),
             onSecondary: const Color(0xFF908F96),
-            background: Colors.black,
+            background: Colors.white,
             onBackground: Colors.white,
             surface: const Color(0xFFF6F6F6),
             onSurface: const Color(0xFF6F6F71),
@@ -84,7 +84,7 @@ class _LightColors extends WidgetColorScheme {
             onAccountHeader: const Color(0xFFFFFFFF),
             onAccountHeaderText: const Color(0xFF28253D),
             onStatusCard: const Color(0xFF28253D).withOpacity(0.9),
-            onStatusCardText: const Color(0xFFFFFFFF),
+            onStatusCardText: const Color(0xFF202031),
             gradients: _LightGradientScheme());
 }
 

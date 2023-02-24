@@ -1,7 +1,7 @@
+import 'package:astrolab/data/horoscope_data_mock.dart';
 import 'package:astrolab/theme/theme.dart';
 import 'package:astrolab/ui/horosocope_details/horoscope_details_page.dart';
-import 'package:astrolab/ui/shared/widget_button.dart';
-import 'package:astrolab/ui/shared/widget_text.dart';
+import 'package:astrolab/ui/pick_horoscope_wheel/horoscope_info_widget.dart';
 import 'package:flutter/material.dart';
 
 class PickHoroscopeWheel extends StatefulWidget {
@@ -24,16 +24,16 @@ class _SelectBirthdayState extends State<PickHoroscopeWheel> {
           child: Center(
             child: Column(
               children: [
-                WidgetText(
-                  "PickHoroscopeWheel",
-                  style: context.textTheme.headline2.copyWith(color: Colors.white),
-                ),
-                WidgetButton(
-                  "Entrer",
-                  onPressed: () {
+                const Expanded(flex: 1, child: SizedBox()),
+                InkWell(
+                  onTap: () {
                     Navigator.of(context).pushNamed(HoroscopeDetailsPage.nameRoute);
                   },
+                  child: HoroscopeInfoWidget(
+                    horoscope: HoroscopeDataMock.verseau,
+                  ),
                 ),
+                const Expanded(flex: 2, child: SizedBox()),
               ],
             ),
           ),
