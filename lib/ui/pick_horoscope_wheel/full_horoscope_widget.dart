@@ -1,4 +1,4 @@
-import 'package:astrolab/model/horoscope.dart';
+import 'package:astrolab/model/current_horoscope.dart';
 import 'package:astrolab/theme/theme.dart';
 import 'package:astrolab/ui/horosocope_details/horoscope_details_page.dart';
 import 'package:astrolab/ui/pick_horoscope_wheel/horoscope_info_widget.dart';
@@ -12,7 +12,8 @@ class FullHoroscopteWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<Horoscope>(builder: (context, horoscope, _) {
+    return Consumer<CurrentHoroscope>(builder: (context, value, _) {
+      final horoscope = value.value;
       return Column(children: [
         InkWell(
           onTap: () {

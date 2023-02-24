@@ -2,11 +2,6 @@ import 'package:astrolab/model/horoscope.dart';
 import 'package:astrolab/ui/pick_horoscope_wheel/date_picker_widget.dart';
 
 class HoroscopeDataMock {
-  static final all = [
-    verseau,
-    cancer,
-  ];
-
   static final verseau = Horoscope(
     name: 'Verseau',
     iconPath: 'assets/svg/verseau_icon.svg',
@@ -23,6 +18,27 @@ class HoroscopeDataMock {
     weaknesses: [
       Weakness.inflexibilite,
       Weakness.colerique,
+    ],
+  );
+
+  static final poisson = Horoscope(
+    name: 'Poisson',
+    iconPath: 'assets/svg/poisson_icon.svg',
+    bio:
+        "Je pense que ma plus grande qualité, c'est que je suis probablement le signe le plus désintéressé du groupe. J'ai une très grande compassion et capacité émotionnelle, mais seulement si je suis capable de ne pas laisser les émotions extérieures me submerger. Je crois également au pardon - je pense que tout le monde mérite une seconde chance.",
+    beginDate1: DateTime(DatePickerWidget.defaultYear, 2, 19),
+    endDate1: DateTime(DatePickerWidget.defaultYear, 3, 20),
+    element: Element.eau,
+    planet: Planet.neptune,
+    powers: [
+      Power.compassion,
+      Power.instinct,
+      Power.intelligence,
+    ],
+    weaknesses: [
+      Weakness.peur,
+      Weakness.naivete,
+      Weakness.tristesse,
     ],
   );
 
@@ -46,4 +62,10 @@ class HoroscopeDataMock {
       Weakness.pessimisme,
     ],
   );
+
+  static final List<Horoscope> all = [
+    verseau,
+    poisson,
+    cancer,
+  ];
 }
