@@ -1,33 +1,42 @@
+import 'package:astrolab/data/horoscope_data_mock.dart';
+import 'package:astrolab/ui/pick_horoscope_wheel/date_picker_widget.dart';
+import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class Horoscope {
-  final String name;
-  final DateTime beginDate;
-  final DateTime endDate;
-  final Element element;
-  final Planet planet;
-  final List<Power> powers;
-  final List<Stone> stones;
+class Horoscope with ChangeNotifier {
+  String name;
+  String iconPath;
+  String bio;
+  DateTime beginDate;
+  DateTime endDate;
+  Element element;
+  Planet planet;
+  List<Power> powers;
+  List<Weakness> weaknesses;
+
+  void changeHoroscope(Horoscope newHoroscope) {
+    name = newHoroscope.name;
+    iconPath = newHoroscope.iconPath;
+    bio = newHoroscope.bio;
+    beginDate = newHoroscope.beginDate;
+    endDate = newHoroscope.endDate;
+    element = newHoroscope.element;
+    planet = newHoroscope.planet;
+    powers = newHoroscope.powers;
+    weaknesses = newHoroscope.weaknesses;
+  }
 
   Horoscope({
     required this.name,
+    required this.iconPath,
+    required this.bio,
     required this.beginDate,
     required this.endDate,
     required this.element,
     required this.planet,
     required this.powers,
-    required this.stones,
+    required this.weaknesses,
   });
-}
-
-enum Stone {
-  amethyste("Améthyste"),
-  agathe("Agathe Mousse"),
-  jaspe("Jaspe"),
-  grenat("Grenat");
-
-  final String value;
-  const Stone(this.value);
 }
 
 enum Element {
@@ -40,13 +49,17 @@ enum Element {
 
 enum Planet {
   uranus("Uranus"),
-  terre("Terre");
+  terre("Terre"),
+  lune("Lune");
 
   final String value;
   const Planet(this.value);
 }
 
 enum Power {
+  loyaute("Loyauté"),
+  emotions("Émotions"),
+  determination("Détermination"),
   force("Force"),
   souplesse("Souplesse"),
   concentration("Concentration");
@@ -55,7 +68,24 @@ enum Power {
   const Power(this.value);
 }
 
+enum Weakness {
+  lunatique("Lunatique"),
+  pessimisme("Pessimiste"),
+  manipulation("Manipulation");
+
+  final String value;
+  const Weakness(this.value);
+}
+
 class HoroscopeUtils {
+  static getHoroscope({required int day, required int month}) => HoroscopeDataMock.all.firstWhere(
+        (horoscope) {
+          final initialDate = DateTime(DatePickerWidget.defaultYear, month, day);
+          return horoscope.beginDate.isBefore(initialDate) && horoscope.endDate.isAfter(initialDate);
+        },
+        orElse: () => HoroscopeDataMock.cancer,
+      );
+
   static dayMonthFormat(DateTime date) => DateFormat('dd.MM').format(date);
   static powersTitle(List<Power> stones) {
     String value = "";
@@ -63,9 +93,9 @@ class HoroscopeUtils {
       return value;
     }
     if (stones.length == 1) {
-      value += "Pouvoir: ";
+      value += "Force : ";
     } else {
-      value += "Pouvoirs: ";
+      value += "Forces : ";
     }
     return value;
   }
@@ -81,20 +111,20 @@ class HoroscopeUtils {
     return value;
   }
 
-  static stonesTitle(List<Stone> stones) {
+  static weaknessTitle(List<Weakness> stones) {
     String value = "";
     if (stones.isEmpty) {
       return value;
     }
     if (stones.length == 1) {
-      value += "Pierre: ";
+      value += "Faiblesse : ";
     } else {
-      value += "Pierres: ";
+      value += "Faiblesses : ";
     }
     return value;
   }
 
-  static stonesElements(List<Stone> stones) {
+  static weaknessElements(List<Weakness> stones) {
     String value = "";
     for (int i = 0; i < stones.length; i++) {
       value += stones[i].value;

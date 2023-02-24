@@ -19,7 +19,7 @@ enum Month {
 }
 
 class MonthUtils {
-  static List<Month> get year => [
+  static List<Month> get all => [
         Month.janvier,
         Month.fevrier,
         Month.mars,
