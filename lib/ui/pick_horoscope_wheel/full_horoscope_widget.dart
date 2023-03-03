@@ -33,12 +33,15 @@ class FullHoroscopteWidget extends StatelessWidget {
             shape: const CircleBorder(),
             padding: const EdgeInsets.all(24),
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+          child: Container(
+            width: 60,
+            height: 60,
+            alignment: Alignment.center,
             child: SvgPicture.asset(
               horoscope.iconPath,
               color: Colors.black,
               width: 60,
+              height: 60,
             ),
           ),
         )
