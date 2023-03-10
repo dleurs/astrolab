@@ -32,6 +32,8 @@ class Horoscope {
 
 enum Element {
   air("Air"),
+  feu("Feu"),
+  terre("Terre"),
   eau("Eau");
 
   final String value;
@@ -41,6 +43,12 @@ enum Element {
 enum Planet {
   uranus("Uranus"),
   neptune("Neptune"),
+  soleil("Soleil"),
+  saturne("Saturne"),
+  mercure("Mercure"),
+  jupiter("Jupiter"),
+  venus("Vénus"),
+  mars("Mars"),
   terre("Terre"),
   lune("Lune");
 
@@ -50,10 +58,31 @@ enum Planet {
 
 enum Power {
   compassion("Compassion"),
+  apprentissageRapide("Apprentissage rapide"),
+  curiosite("Curiosité"),
+  cooperation("Coopération"),
+  maitriseDeSoi("Maîtrise de soi"),
+  puissance("Puissance"),
+  passion("Passion"),
+  sensDeLhumour("Sens de l'humour"),
+  courage("Courage"),
+  generosite("Générosité"),
+  idealiste("Idéaliste"),
+  juste("Juste"),
+  affectuosite("Affectuosité"),
   instinct("Instinct"),
   intelligence("Intelligence"),
+  creativite("Créativité"),
+  travailleur("Travailleur"),
+  methodique("Méthodique"),
+  leadership("Leadership"),
   originalite("Originalité"),
+  patience("Patience"),
+  fiabilite("Fiabilité"),
+  responsabilite("Responsabilité"),
   independance("Indépendance"),
+  honnetere("Honnêteté"),
+  optimisme("Optimisme"),
   loyaute("Loyauté"),
   emotions("Émotions"),
   determination("Détermination"),
@@ -66,14 +95,31 @@ enum Power {
 }
 
 enum Weakness {
-  peur("peur"),
-  naivete("naïveté"),
-  tristesse("tristesse"),
+  peur("Peur"),
+  stress("Stress"),
+  indecis("Indécis"),
+  evitement("Évitement"),
+  timidite("Timidité"),
+  rancunier("Rancunier"),
+  mefiance("Méfiance"),
+  jalousie("Jalousie"),
+  manipulation("Manipulation"),
+  insecurite("Insécurité"),
+  hesitation("Hésitation"),
+  incoherence("Incohérence"),
+  mauvaiseHumeur("Mauvaise humeur"),
+  paresse("Paresse"),
+  arrogance("Arrogance"),
+  impulsivite("Impulsivité"),
+  possessivite("Possessivité"),
+  entetement("Entêtement"),
+  impatience("Impatience"),
+  naivete("Naïveté"),
+  tristesse("Tristesse"),
   inflexibilite("Inflexibilité"),
   colerique("Colérique"),
   lunatique("Lunatique"),
-  pessimisme("Pessimiste"),
-  manipulation("Manipulation");
+  pessimisme("Pessimiste");
 
   final String value;
   const Weakness(this.value);
@@ -82,14 +128,14 @@ enum Weakness {
 class HoroscopeUtils {
   static Horoscope getHoroscope({required int day, required int month}) {
     final value = HoroscopeDataMock.all;
+    final initialDate = DateTime(DatePickerWidget.defaultYear, month, day, 1);
     for (Horoscope horoscope in HoroscopeDataMock.all) {
-      final initialDate = DateTime(DatePickerWidget.defaultYear, month, day);
       if (horoscope.beginDate1.isBefore(initialDate) && horoscope.endDate1.isAfter(initialDate) ||
           (horoscope.beginDate2?.isBefore(initialDate) ?? false) && (horoscope.endDate2?.isAfter(initialDate) ?? false)) {
         return horoscope;
       }
     }
-    return HoroscopeDataMock.cancer;
+    return HoroscopeDataMock.capricorne;
   }
 
   static dayMonthFormat(DateTime date) {
