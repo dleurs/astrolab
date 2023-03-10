@@ -19,11 +19,11 @@ class HoroscopeDetailsPage extends StatefulWidget {
 
 class _SelectBirthdayState extends State<HoroscopeDetailsPage> with SingleTickerProviderStateMixin {
   late AnimationController animationController;
-
+  bool step = true;
   @override
   void initState() {
     animationController = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(milliseconds: 500),
       vsync: this,
     );
     super.initState();
@@ -77,7 +77,10 @@ class _SelectBirthdayState extends State<HoroscopeDetailsPage> with SingleTicker
                     WidgetSpace.large,
                     InkWell(
                       onTap: () {
-                        animationController.forward();
+                        animationController.forward().whenComplete(() => setState(() {
+                              animationController.reset();
+                              step = !step;
+                            }));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -140,14 +143,27 @@ class _SelectBirthdayState extends State<HoroscopeDetailsPage> with SingleTicker
                                 style: BorderStyle.solid,
                               ),
                             ),
-                            child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                              Expanded(
-                                child: SvgPicture.asset(
-                                  horoscope.iconPath,
-                                  color: context.colors.secondary,
-                                ),
-                              ),
-                            ]),
+                            child: SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.7,
+                              child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                                step
+                                    ? Expanded(
+                                        child: SvgPicture.asset(
+                                          horoscope.iconPath,
+                                          color: context.colors.secondary,
+                                        ),
+                                      )
+                                    : WidgetText(
+                                        textAlign: TextAlign.center,
+                                        "Good Idea Believe in yourself and talk to that person.",
+                                        style: context.textTheme.textNormalStyle.copyWith(
+                                          color: context.colors.primary,
+                                          fontSize: 18,
+                                          height: 27 / 18,
+                                        ),
+                                      ),
+                              ]),
+                            ),
                           ),
                         ),
                         Positioned(
