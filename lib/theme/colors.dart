@@ -69,7 +69,7 @@ class _LightColors extends WidgetColorScheme {
             background: Colors.white,
             onBackground: Colors.white,
             surface: const Color(0xFFF6F6F6),
-            onSurface: const Color(0xFF6F6F71),
+            onSurface: const Color(0xFF605454),
             onPrimaryContainer: const Color(0xFFA496FC),
             primaryContainer: const Color(0xFFCFCED6),
             positive: const Color(0xFF06C167),

@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/fonts/
     - assets/images/welcome/
+    - assets/images/horoscope/
     - assets/svg/
 
 

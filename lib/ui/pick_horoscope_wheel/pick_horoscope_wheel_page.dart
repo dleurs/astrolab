@@ -1,5 +1,6 @@
 import 'package:astrolab/model/current_horoscope.dart';
 import 'package:astrolab/theme/theme.dart';
+import 'package:astrolab/ui/horosocope_details/widgets/horoscope_details_header.dart';
 import 'package:astrolab/ui/pick_horoscope_wheel/date_picker_widget.dart';
 import 'package:astrolab/ui/pick_horoscope_wheel/full_horoscope_widget.dart';
 import 'package:flutter/material.dart';
@@ -38,6 +39,7 @@ class _SelectBirthdayState extends State<PickHoroscopeWheel> {
                     ],
                   ),
                 ),
+                const HoroscopeDetailsHeader(),
                 Column(
                   children: const [
                     Expanded(flex: 3, child: SizedBox()),
