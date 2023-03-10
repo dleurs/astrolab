@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: CustomTheme(isDark: false).themeData,
       darkTheme: CustomTheme(isDark: true).themeData,
+      initialRoute: Welcome.nameRoute,
       routes: {
         '/': (context) => const WelcomePage(),
         PickHoroscopeWheel.nameRoute: (context) => const PickHoroscopeWheel(),

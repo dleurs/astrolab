@@ -42,6 +42,27 @@ class HoroscopeDataMock {
     ],
   );
 
+  static final belier = Horoscope(
+    name: 'Bélier',
+    iconPath: 'assets/svg/poisson_icon.svg',
+    bio:
+        "Je pense que ma plus grande qualité, c'est que je suis probablement le signe le plus désintéressé du groupe. J'ai une très grande compassion et capacité émotionnelle, mais seulement si je suis capable de ne pas laisser les émotions extérieures me submerger. Je crois également au pardon - je pense que tout le monde mérite une seconde chance.",
+    beginDate1: DateTime(DatePickerWidget.defaultYear, 2, 19),
+    endDate1: DateTime(DatePickerWidget.defaultYear, 3, 20),
+    element: Element.eau,
+    planet: Planet.neptune,
+    powers: [
+      Power.compassion,
+      Power.instinct,
+      Power.intelligence,
+    ],
+    weaknesses: [
+      Weakness.peur,
+      Weakness.naivete,
+      Weakness.tristesse,
+    ],
+  );
+
   static final cancer = Horoscope(
     name: 'Cancer',
     iconPath: 'assets/svg/cancer_icon.svg',
