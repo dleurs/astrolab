@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:astrolab/theme/theme.dart';
+import 'package:astrolab/ui/pick_horoscope_wheel/pick_horoscope_wheel_page.dart';
 import 'package:astrolab/ui/shared/widget_button.dart';
 import 'package:astrolab/ui/shared/widget_space.dart';
 import 'package:astrolab/ui/shared/widget_text.dart';
@@ -118,7 +119,7 @@ class _SelectBirthdayState extends State<Welcome> {
                             child: WidgetButton(
                               "Entrer",
                               onPressed: () {
-                                Navigator.of(context).pushNamed(Welcome.nameRoute);
+                                Navigator.of(context).pushNamed(PickHoroscopeWheel.nameRoute);
                               },
                               backgroundColor: context.colors.primary,
                               textColor: context.colors.onPrimary,
