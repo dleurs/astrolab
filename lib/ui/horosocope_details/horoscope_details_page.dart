@@ -77,7 +77,7 @@ class _SelectBirthdayState extends State<HoroscopeDetailsPage> with SingleTicker
                     WidgetSpace.large,
                     InkWell(
                       onTap: () {
-                        animationController.animateBack(1).whenComplete(() => setState(() {
+                        animationController.forward().whenComplete(() => setState(() {
                               animationController.reset();
                               step = !step;
                             }));
