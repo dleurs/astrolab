@@ -17,7 +17,7 @@ class FullHoroscopteWidget extends StatelessWidget {
       return Column(children: [
         InkWell(
           onTap: () {
-            Navigator.of(context).pushNamed(HoroscopeDetailsPage.nameRoute); //TODO horoscope specific
+            Navigator.of(context).pushNamed(HoroscopeDetailsPage.nameRoute, arguments: horoscope); //TODO horoscope specific
           },
           child: HoroscopeInfoWidget(
             horoscope: horoscope,
@@ -26,7 +26,7 @@ class FullHoroscopteWidget extends StatelessWidget {
         WidgetSpace.jumbo,
         ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pushNamed(HoroscopeDetailsPage.nameRoute); //TODO horoscope specific
+            Navigator.of(context).pushNamed(HoroscopeDetailsPage.nameRoute, arguments: horoscope); //TODO horoscope specific
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: context.colors.secondary,
