@@ -3,7 +3,7 @@ git fetch;
 git pull origin main;
 
 git remote add github git@github.com:dleurs/astrolab.git;
-flutter build web --release; # web/index.html   <base href="/astrolab/">
+flutter build web; # web/index.html   <base href="/astrolab/">
 rm -rf docs;
 cp -R web docs;
 git add -A;
