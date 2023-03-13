@@ -8,7 +8,7 @@ git push github main --force;
 flutter create .;
 flutter build web --base-href="/astrolab/" --release; # web/index.html   <base href="/astrolab/">
 trash docs;
-cp -R build/web docs;
+mv build/web docs;
 git add -A;
 git commit -m "New web release";
 git push github main;
