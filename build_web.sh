@@ -15,4 +15,5 @@ git push github main;
 # Wait 2 minuts and visit  https://dleurs.github.io/astrolab/
 
 git remote remove github;
+git reset --hard main;
 
