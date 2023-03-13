@@ -5,8 +5,8 @@ git pull origin main;
 git remote add github git@github.com:dleurs/astrolab.git;
 git push github main --force;
 
-flutter build web  --release; # web/index.html   <base href="/astrolab/">
-rm -rf docs;
+flutter build web --release; # web/index.html   <base href="/astrolab/">
+trash docs;
 cp -R web docs;
 git add -A;
 git commit -m "New web release";
