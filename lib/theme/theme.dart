@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -28,13 +26,13 @@ class CustomTheme {
   static const textFontFamily = "Afterglow";
 
   static SystemUiOverlayStyle appOverlayStyle({bool isBlack = true}) {
-    if (Platform.isIOS) {
+    /* if (Platform.isIOS) {
       return SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarBrightness: isBlack ? Brightness.light : Brightness.dark,
         statusBarIconBrightness: isBlack ? Brightness.light : Brightness.dark,
       );
-    }
+    } */
     return SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       statusBarIconBrightness: isBlack ? Brightness.dark : Brightness.light,
