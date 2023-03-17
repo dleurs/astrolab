@@ -4,10 +4,9 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "dcc9a72ac857a084239bd572fac36143",
-"index.html": "a13a1c7bd3a1ef6c7acc9602e4d91cbd",
-"/": "a13a1c7bd3a1ef6c7acc9602e4d91cbd",
-"main.dart.js": "ca7d384d011985b1023ed74a10e225b2",
-"flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
+"index.html": "bf60adaf89d8315305b38da560aa1dfa",
+"/": "bf60adaf89d8315305b38da560aa1dfa",
+"main.dart.js": "9a625f84383b103b98c3e546571b3bf3",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
@@ -21,7 +20,7 @@ const RESOURCES = {
 "assets/shaders/ink_sparkle.frag": "fcec0a5db66a6d0853ca9f9043dede39",
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
 "assets/assets/svg/scorpion_icon.svg": "a8807bd14a76dec01d08681828a46f6c",
-"assets/assets/svg/capricorne_icon.svg": "6f62e6f2b4977bb9fac8188d37f39dcf",
+"assets/assets/svg/capricorne_icon.svg": "8c0c84b0b2e526e1c38fb7badba276ac",
 "assets/assets/svg/gemeaux_icon.svg": "8b40d95836f97bb64c3c44048c1fe207",
 "assets/assets/svg/belier_icon.svg": "67d1b741f9d14dc90f1884c1fbc9088a",
 "assets/assets/svg/verseau_icon.svg": "9b8925b2a275f10cf4af76e34d78d0a8",
@@ -30,9 +29,9 @@ const RESOURCES = {
 "assets/assets/svg/cancer_icon.svg": "ff30c35713a95cd06fc95bc03e3573e9",
 "assets/assets/svg/poisson_icon.svg": "f8b2ec8c4e2a6593b7a15d58d2a87cf3",
 "assets/assets/svg/sagittaire_icon.svg": "2d2af26427048384272933f35eeadbc3",
-"assets/assets/svg/vierge_icon.svg": "4a746c05310361e906dd9cb11508bde6",
-"assets/assets/svg/lion_icon.svg": "fa31208aa04c3dd3e3080fb68a645082",
-"assets/assets/images/horoscope/paper.png": "918337d45053a12d5530b40fe3b0ee24",
+"assets/assets/svg/vierge_icon.svg": "337a7a1aab279942688d029a89aceb58",
+"assets/assets/svg/lion_icon.svg": "bc33730e9281ce7b3287606dc3441ac2",
+"assets/assets/images/horoscope/paper.png": "de68acdc7e5fad7301db0106eed036b9",
 "assets/assets/images/horoscope/switch.png": "a1282b36a10b5c39bc46a62716a11b85",
 "assets/assets/images/welcome/moon.png": "27051a37c33f1b59ad4a5291df31c3ca",
 "assets/assets/images/welcome/sun.png": "539321934d4dd1bd0686e0a2bbbc8018",
@@ -71,11 +70,7 @@ const RESOURCES = {
 "assets/assets/fonts/roboto/Roboto-BlackItalic.ttf": "c3332e3b8feff748ecb0c6cb75d65eae",
 "assets/assets/fonts/roboto/Roboto-Bold.ttf": "b8e42971dec8d49207a8c8e2b919a6ac",
 "assets/assets/fonts/roboto/Roboto-Thin.ttf": "66209ae01f484e46679622dd607fcbc5",
-"assets/assets/fonts/roboto/Roboto-Black.ttf": "d6a6f8878adb0d8e69f9fa2e0b622924",
-"canvaskit/canvaskit.js": "2bc454a691c631b07a9307ac4ca47797",
-"canvaskit/profiling/canvaskit.js": "38164e5a72bdad0faa4ce740c9b8e564",
-"canvaskit/profiling/canvaskit.wasm": "95a45378b69e77af5ed2bc72b2209b94",
-"canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62"
+"assets/assets/fonts/roboto/Roboto-Black.ttf": "d6a6f8878adb0d8e69f9fa2e0b622924"
 };
 
 // The application shell files that are downloaded before a service worker can
