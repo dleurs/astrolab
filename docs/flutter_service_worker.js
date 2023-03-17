@@ -4,9 +4,10 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "dcc9a72ac857a084239bd572fac36143",
-"index.html": "4119020d8ff22d5d7eb6e4775214581b",
-"/": "4119020d8ff22d5d7eb6e4775214581b",
-"main.dart.js": "bf2b83071e764081b55847b6073cc802",
+"index.html": "a13a1c7bd3a1ef6c7acc9602e4d91cbd",
+"/": "a13a1c7bd3a1ef6c7acc9602e4d91cbd",
+"main.dart.js": "ca7d384d011985b1023ed74a10e225b2",
+"flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
@@ -70,7 +71,11 @@ const RESOURCES = {
 "assets/assets/fonts/roboto/Roboto-BlackItalic.ttf": "c3332e3b8feff748ecb0c6cb75d65eae",
 "assets/assets/fonts/roboto/Roboto-Bold.ttf": "b8e42971dec8d49207a8c8e2b919a6ac",
 "assets/assets/fonts/roboto/Roboto-Thin.ttf": "66209ae01f484e46679622dd607fcbc5",
-"assets/assets/fonts/roboto/Roboto-Black.ttf": "d6a6f8878adb0d8e69f9fa2e0b622924"
+"assets/assets/fonts/roboto/Roboto-Black.ttf": "d6a6f8878adb0d8e69f9fa2e0b622924",
+"canvaskit/canvaskit.js": "2bc454a691c631b07a9307ac4ca47797",
+"canvaskit/profiling/canvaskit.js": "38164e5a72bdad0faa4ce740c9b8e564",
+"canvaskit/profiling/canvaskit.wasm": "95a45378b69e77af5ed2bc72b2209b94",
+"canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62"
 };
 
 // The application shell files that are downloaded before a service worker can
