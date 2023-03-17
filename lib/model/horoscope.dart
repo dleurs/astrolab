@@ -12,6 +12,7 @@ class Horoscope {
   DateTime? endDate2; // For capricorne, 22 december to 19 january
   Element element;
   Planet planet;
+  String horoscopeOfTheDay;
   List<Power> powers;
   List<Weakness> weaknesses;
 
@@ -24,6 +25,7 @@ class Horoscope {
     this.beginDate2,
     this.endDate2,
     required this.element,
+    required this.horoscopeOfTheDay,
     required this.planet,
     required this.powers,
     required this.weaknesses,

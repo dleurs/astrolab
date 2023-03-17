@@ -3,7 +3,7 @@
     "configurations": [
         {
             "program": "lib/main.dart",
-            "args": ["--release"],
+            //"args": ["--release"],
             "name": "Astrolab debug",
             "request": "launch",
             "type": "dart"
